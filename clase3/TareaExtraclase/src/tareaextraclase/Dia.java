@@ -14,10 +14,12 @@ e imprima Lunes si es 1, Martes si es 2, ... , Domingo si es 7.
 public class Dia {
     public static void main(String[] args) {
     Scanner entrada = new Scanner(System.in);
+    // DECLARACION DE VARIABLES
     int opcion;
+    // INGRESO DE DATOS
     System.out.println("Ingrese el número de día: ");
     opcion = entrada.nextInt();
-    
+    // CALCULO
     switch(opcion){
         case 1:
             System.out.printf("Día %d %s\n", opcion, "Lunes");            
@@ -41,11 +43,8 @@ public class Dia {
             System.out.printf("Día %d %s\n", opcion, "Domingo");
             break;
         default:
-            System.out.printf("Respuesta incorrecto: %d\n", opcion);
-            ;
-    
-    
-  
+            System.out.printf("Respuesta incorrecta: %d\n", opcion);
+            
     } 
     }
 }

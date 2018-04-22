@@ -33,12 +33,12 @@ datos de entrada necesarios.
 public class Venta {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        // Declaracion de variables
+        // DECLARACION DE VARIABLES
         String nombre;
         int tipo, cantidad;
-        double precioUnitario, subtotal, descuento, total;
+        double precioUnitario, subtotal, descuento = 0, total;
         
-        // Ingreso de datos
+        // INGRESO DE DATOS
         System.out.println("Ingrese nombre y apellido del cliente: ");
         nombre = entrada.nextLine();
         System.out.println("Seleccione el tipo de cliente(1,2,3): ");
@@ -49,10 +49,37 @@ public class Venta {
         // entrada.nextLine(); // limpiando el scanner
         System.out.println("Ingrese el valor de cada celular: ");
         precioUnitario = entrada.nextDouble();
-        
+        // CALCULO
         // Calculo del descuento
+        subtotal = cantidad * precioUnitario;
         
-        // Salida
-    
+        // Descuento
+        switch(tipo){
+            case 1:
+                descuento = subtotal * 10/100;
+                break;
+                
+            case 2:
+                descuento = subtotal * 20/100;
+                break;
+                
+            case 3:
+                descuento = subtotal * 30/100;
+                break;
+                
+            default:
+                System.out.printf("Usted a elegido un tipo de cliente no registrado: %d", tipo);
+        }
+        // Valor final a pagar: Subtotal - Descuento
+        total = subtotal - descuento;
+        
+        // SALIDA
+        System.out.printf("\tNombre: %s\n", nombre);
+        System.out.printf("\tTipo de Cliente: %d\n", tipo);
+        System.out.printf("\tCantidad de Celulares: %d celulares\n", cantidad);
+        System.out.printf("\tPrecio por cada celular: %.2f USD\n", precioUnitario);
+        System.out.printf("\tSubtotal a pagar: %.2f USD\n", subtotal);
+        System.out.printf("\tDescuento: %.2f USD\n", descuento);
+        System.out.printf("\tValor final a pagar: %.2f USD\n", total);
     }
 }
