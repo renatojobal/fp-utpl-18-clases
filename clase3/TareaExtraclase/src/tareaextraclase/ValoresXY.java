@@ -1,6 +1,7 @@
 
 package tareaextraclase;
-
+import static java.lang.Math.pow; // Librería para poder elevar a la potencia
+import java.util.Scanner;
 /*
 Ejercicio:
 Solución que permita calcular y presentar los valores de X y Y, teniendo como 
@@ -17,9 +18,26 @@ Si X==0 entonces Y=1
  */
 public class ValoresXY {
     public static void main(String[] args) {
+    Scanner entrada = new Scanner(System.in);
     
+    double x, y;
     
+    // INGRESO DE x
+    System.out.println("Ingrese el valor de x: ");
+    x = entrada.nextDouble();
     
+    //CALCULO
+    if(x < 0){
+        y = 3*x+10;
+    }else{
+        if(x > 0){
+            y = pow(x, 2)+6; // Potenciando 
+        }else{
+            y = 1;
+        }
+    }
+    // SALIDA
+    System.out.printf("El valor de y es igual a: ", y);
     
     }
 }
