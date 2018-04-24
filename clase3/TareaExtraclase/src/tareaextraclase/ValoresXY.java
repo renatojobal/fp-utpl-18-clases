@@ -2,6 +2,7 @@
 package tareaextraclase;
 import static java.lang.Math.pow; // Librería para poder elevar a la potencia
 import java.util.Scanner;
+
 /*
 Ejercicio:
 Solución que permita calcular y presentar los valores de X y Y, teniendo como 
@@ -28,10 +29,11 @@ public class ValoresXY {
     
     //CALCULO
     if(x < 0){
-        y = 3*x+10;
+        y = (4* x +10);
+        System.out.printf("El valor de y es igual a: ", y);
     }else{
         if(x > 0){
-            y = pow(x, 2)+6; // Potenciando 
+            y = (pow(x,2)+6); // Potenciando 
         }else{
             y = 1;
         }

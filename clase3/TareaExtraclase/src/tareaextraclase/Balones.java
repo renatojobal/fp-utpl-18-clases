@@ -22,18 +22,23 @@ public class Balones {
     cantidad = entrada.nextInt();
     System.out.printf("Ingrese el precio unitario de cada balón: ");
     precioUnitario = entrada.nextDouble();
+    
+    // CALCULO
     subtotal = cantidad * precioUnitario;
     if(cantidad == 1){      
-        descuento = subtotal * (50 / 100);
+        descuento = subtotal * 50/100;
+   
     }else{
         if(cantidad == 2){
-            descuento = subtotal * (70 / 100);
+            descuento = subtotal * 70/100;
+            
         }else{   
-            descuento = subtotal * (80 / 100);
+            descuento = subtotal * 80/100;
         }    
     }
-    // System.out.printf("Descuento = ", descuento);
     total = subtotal - descuento;
+    
+
     // SALIDA
         
     System.out.printf("\tCantidad de Balones: %d balones\n", cantidad);

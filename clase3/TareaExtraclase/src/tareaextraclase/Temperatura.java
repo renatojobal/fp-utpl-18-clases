@@ -49,7 +49,8 @@ public class Temperatura {
     }
     if(opcion == 1){ 
         System.out.printf("La temperatura es: %.2f grados Fahrenheit", temperatura);
-    }else{
+    }
+    if(opcion == 2){
         System.out.printf("La temperatura es: %.2f grados Celcius", temperatura);
     }
     
