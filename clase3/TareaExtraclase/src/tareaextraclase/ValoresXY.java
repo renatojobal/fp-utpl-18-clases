@@ -26,11 +26,10 @@ public class ValoresXY {
     // INGRESO DE x
     System.out.println("Ingrese el valor de x: ");
     x = entrada.nextDouble();
-    
     //CALCULO
     if(x < 0){
-        y = (4* x +10);
-        System.out.printf("El valor de y es igual a: ", y);
+        y = (3* x +10);
+        
     }else{
         if(x > 0){
             y = (pow(x,2)+6); // Potenciando 
@@ -39,7 +38,7 @@ public class ValoresXY {
         }
     }
     // SALIDA
-    System.out.printf("El valor de y es igual a: ", y);
+    System.out.println("El valor de y es igual a: "+y);
     
     }
 }
