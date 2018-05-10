@@ -29,7 +29,6 @@ public class ValoresXY {
     //CALCULO
     if(x < 0){
         y = (3* x +10);
-        
     }else{
         if(x > 0){
             y = (pow(x,2)+6); // Potenciando 
